@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, a {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply a background gradient to the body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            animation: backgroundAnimation 10s ease infinite;
+        }
+
+        /* Add a floating effect to the body */
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(to right, #6a11cb, #2575fc); }
+            50% { background: linear-gradient(to right, #2575fc, #6a11cb); }
+            100% { background: linear-gradient(to right, #6a11cb, #2575fc); }
+        }
+
+        /* Style the heading with some smooth animation */
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Animation for the heading */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Style the link with smooth transitions and shadows */
+        a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            transform: scale(1);
+        }
+
+        /* Hover effect for the link */
+        a:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Active effect for the link */
+        a:active {
+            background-color: #004085;
+            transform: scale(1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Add a nice fade-in effect when the page loads */
+        .container {
+            animation: fadeInContainer 2s ease-out;
+        }
+
+        @keyframes fadeInContainer {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ensure the link is clickable and aligned */
+        a:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Our Website</h1>
+    <a href="login.jsp">Login</a>
+</div>
+</body>
+</html>
